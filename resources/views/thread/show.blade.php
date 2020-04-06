@@ -12,6 +12,7 @@
 
                         <div class="collection">
 
+                            <!-- Dit kan beter performend worden! -->
                             @foreach($thread->topics as $topic)
                             <!-- BEGIN TOPIC -->
                             <a href="topic.html" class="collection-item avatar collection-link">
@@ -27,12 +28,14 @@
                                             </div>
                                         </div>
                                         <div class="row last-row">
+                                            <!--  Dit kan beter performend worden! -->
                                             <div class="col s12 post-timestamp">Gepost door: {{ $topic->user->username }} op: {{ $topic->created_at }}</div>
                                         </div>
                                     </div>
 
                                     <div class="col s2">
                                         <h6 class="title center-align">Replies</h6>
+                                        <!--  Dit kan beter performend worden! -->
                                         <p class="center replies">{{ count($topic->replies) }}</p>
                                     </div>
 

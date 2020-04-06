@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Thread;
+use App\Models\Thread;
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class ThreadController extends Controller
 {
@@ -41,13 +43,11 @@ class ThreadController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Thread $thread
+     * @return Factory|\Illuminate\View\View
      */
-    public function show($id)
+    public function show(Thread $thread): View
     {
-        $thread = Thread::find($id);
-
         return view('thread.show')->with('thread', $thread);
     }
 

@@ -27,11 +27,13 @@
                                             </div>
                                         </div>
                                         <div class="row last-row">
+                                            <!--  Dit kan beter performend worden! -->
                                             <div class="col s12 post-timestamp">Moderator: {{ $thread->user->username }}</div>
                                         </div>
                                     </div>
                                     <div class="col s3">
                                         <h6 class="title center-align">Statistieken</h6>
+                                        <!--  Dit kan beter performend worden! -->
                                         <p class="center-align">{{ count($thread->topics) }} topic(s)</p>
                                     </div>
                                 </div>
